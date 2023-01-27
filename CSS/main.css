@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Alumni+Sans+Pinstripe&family=Dancing+Script:wght@400;500;600;700&family=Kolker+Brush&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800&family=Poor+Story&family=Rajdhani:wght@300&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Titan+One&family=Ubuntu:wght@300&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
-    font-family: sans-serif;
+    font-family: 'Titan One', cursive;
     box-sizing: border-box;
 }
-
 :root {
-    --colorMain: #ffa321; 
+    --colorMain: #BCC3BC;
+    --colorSecondary: #464844;
+    --colorTird: #4C4DA1;
+    --color4: #6C4D9C; 
+    --borderRadius: 10px;
 }
 
 body {
@@ -16,6 +21,9 @@ body {
     min-height: 100vh;
     display: grid;
     place-content: center;
+    background-image: url("../resources/f3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #main {
@@ -41,18 +49,80 @@ body {
 .item {
     display: grid;
     place-content: center;
-    border: solid 1px #000;
-    background-color: #FFf;
+    background-color: var(--colorSecondary);
+    opacity: .8;
     cursor: pointer;
+    border-radius: var(--borderRadius);
+    transition: .3s;
+}
+
+.item:hover {
+    background-color: var(--color4);
+}
+
+.item-hidden {
+    display: grid;
+    place-content: center;
+    background-color: transparent;
 }
 
 .item img{
     width: 80%;
     justify-self: center;
     align-self: center;
-    padding: 10%
+    padding: 10%;
+}
+
+.item-hidden img {
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+    padding: 10%;
 }
 
 #controls-score {
-    background-color:#aaa;
+    width: 100%;
+    color: var(--colorSecondary);
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    place-content: center;
+}
+
+#cont-p {
+    align-self: center;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+h3 {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 200;
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+button {
+    width: 100%;
+    margin: auto;
+    background-color: var(--color4);
+    outline: none;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--borderRadius);
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: var(--colorTird);
 }
